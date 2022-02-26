@@ -1,25 +1,28 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
-/*
-test('Verifier si la page affiche correctement', () => {
-    const root = document.createElement("div");
-    ReactDOM.render(<App />, root);
-    expect(root.querySelector("h1").textContent).toBe("TODO");
-});
-*/
-// la méthode render retourne le composant <App />
-// The i flag makes the regular expression case-insensitive
 
 /*
-test('Verifier si la page affiche correctement', () => {
-    const root = document.createElement("div");
-    ReactDOM.render(<App />, root);
-    expect(root.querySelector("h1").textContent).toBe("TODO");
-});
+1 - Render a component we to test
+2 - Find elements we want to interact with
+3 - Interact with those elements
+4 - Assert that results are as expected
 */
-const sum = require('./App');
+
+// Screen - une maniere d'intéragir avec les component
+
+test('renders learn react link', () => {
+    // App est un component
+    render(<App/ >);
+    const linkElement = screen.getByText(/learn react/i);
+    expect(linkElement).toBeDefined();
+});
 
 test('adds 1 + 2 to equal 3', () => {
-	expect(sum(1, 2)).toBe(3);
+	expect(sum(3, 5)).toBe(8);
 });
+
+
+
+
+
