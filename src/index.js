@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Clock from './Clock';
 import reportWebVitals from './reportWebVitals';
 
 // objet
@@ -39,10 +40,10 @@ const element = (
 );
 
 ReactDOM.render(
-	<React.StrictMode>
-	<App />
-	</React.StrictMode>,
-	document.getElementById('root2')
+<React.StrictMode>
+<App />
+</React.StrictMode>,
+document.getElementById('root2')
 );
 
 
@@ -57,6 +58,7 @@ ReactDOM.render(
 	document.getElementById('root')
 );*/
 
+/*
 function tick() {
 	const element = (
 		<div>
@@ -66,8 +68,8 @@ function tick() {
 	);
 	ReactDOM.render(element, document.getElementById('clock'));
 }
-
 setInterval(tick, 1000);
+*/
 
 //Le moyen le plus simple de définir un composant consiste à écrire une fonction JavaScript :
 function Welcome(props) {
