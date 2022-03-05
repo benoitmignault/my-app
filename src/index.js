@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Clock from './Clock';
+import Click from './Click';
+import Conditionnel from './Conditionnel';
+import Page from './Page';
 import reportWebVitals from './reportWebVitals';
 
 // objet
@@ -23,21 +26,11 @@ function formatName(user) {
 // Second paramètre l'endroit où l'on veut le faire afficher das le fichier HTLM
 function getGreeting(user) {
 	if (user) {
-		return <h1>Bonjour, {formatName(user)} & avec la somme de deux nombre : <p>{sum(3,5)}</p> !</h1>;
+		return <h1>Bonjour, {formatName(user)} & avec la somme de deux nombre : <p>{sum(3,5)} !</p></h1>;
 	}
 
 	return <h1>Bonjour, Belle Inconnue.</h1>;
 }
-
-
-
-// doit contenir un seul élément qui sera utiliser dans ReactDOM
-// Affichage la somme de deux nombres
-const element = (
-	<h1>
-		Bonjour, {formatName(user)} ! <p>{sum(3,5)}</p>
-	</h1>
-);
 
 ReactDOM.render(
 <React.StrictMode>
@@ -46,17 +39,10 @@ ReactDOM.render(
 document.getElementById('root2')
 );
 
-
-ReactDOM.render(
-	element,
-	document.getElementById('root')
-);
-
-/*
 ReactDOM.render(
 	getGreeting(user),
 	document.getElementById('root')
-);*/
+);
 
 /*
 function tick() {

@@ -21,8 +21,7 @@ import './index.css';
 
 	5- If the Clock component is ever removed from the DOM, React calls the componentWillUnmount() lifecycle method 
 	so the timer is stopped.
-*/ 
-
+*/
 
 class Clock extends React.Component {
 	// Class components should always call the base constructor with props.
